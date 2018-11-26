@@ -8,10 +8,10 @@ relativeUrl: 由 @POST("")设置
 
 1.自定义Interface
 interface KService{
-
     @POST("index.php/Home/Interface/index?")
     fun getMainPage(@Field("class") classx: String, @Field("method") method: String, observer : Observer): BaseObserve<Channel>
 }
+    
 2.调用
 var service = LiteNet.getInstance().create("http://192.168.3.97",KService::class.java)
 service.getMainPage("classValue","methodValue",this)
