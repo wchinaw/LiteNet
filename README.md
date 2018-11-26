@@ -17,10 +17,10 @@ var service = LiteNet.getInstance().create("http://192.168.3.97",KService::class
 service.getMainPage("classValue","methodValue",this)
 
 3.回调
+
 override fun update(o: Observable?, arg: Any?) {
         val observe = o as BaseObserve<*>
         var data = observe.data
-
         when(data){
             is Channel ->{
                 Log.e(TAG,"got Channel :"+data);
